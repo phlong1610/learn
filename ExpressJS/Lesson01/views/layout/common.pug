@@ -1,0 +1,17 @@
+html
+    head
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+    body
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/') Home
+                li.nav-item
+                    a.nav-link(href='#') Users
+                li.nav-item
+                    a.nav-link(href='/products') Products
+                li.nav-item
+                    a.nav-link(href='/auth/login') Sign Up
+        p= user ? user.name : ''
+        .container.px-5.pt-5
+            block content

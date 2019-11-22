@@ -1,0 +1,18 @@
+extends ../layout/common
+block content    
+    h1 Product
+    a.btn.btn-primary(href="products/create") New product
+    form.form-inline.justify-content-end(action="products/search" method="GET")
+        input.form-control.mr-2(type="text" name="q")
+        button.btn.btn-outline-success Search
+    table.table 
+        tr  
+            th Name
+            th Price
+            th Action
+        each product in products
+            tr
+                td= product.name
+                td= product.price
+                td
+                    a.btn.btn-light(href="/products/" + product.id) View
